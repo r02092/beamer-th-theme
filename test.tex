@@ -1,0 +1,77 @@
+\documentclass[10pt,unicode]{beamer}
+\usepackage{luatexja-fontspec}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usetheme{th}
+\AtBeginSection{
+	\begin{frame}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+\AtBeginSubsection{
+	\begin{frame}
+		\tableofcontents[currentsubsection]
+	\end{frame}
+}
+\renewcommand{\baselinestretch}{1.2}
+\title{T.H.先生の講義資料っぽいやつ}
+\subtitle{応用コンピュータリテラシー　第100回}
+\author{R02092\inst{1}}
+\institute{\inst{1}高知工科大学　情報学群　学生}
+\titlegraphic{\includegraphics[width=175px]{kut-000.png}}
+\date{2024年5月26日}
+\logo{\includegraphics[clip,width=20px]{kut-001.png}}
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	\begin{frame}{講義予定}
+		ないです．
+	\end{frame}
+	\begin{frame}{本日の目標}
+		\begin{enumerate}
+			\item \LaTeX でT.H.先生の講義資料っぽいやつを作れるようになる．
+			\item 演習課題の提出方法を習得する．
+		\end{enumerate}
+	\end{frame}
+	\section{テキストの確認}
+	\subsection{数学書の文書の読みかた}
+	\begin{frame}
+		\frametitle{数学書の文書の読みかた}
+		\begin{block}{倍数}
+			$a$を整数，$b$を$0$でない整数とする．$a=bq$を満たす整数$q$が存在するとき，
+			$a$を$b$の倍数という．
+		\end{block}
+	\end{frame}
+	\subsection{素数}
+	\begin{frame}
+		\frametitle{素数}
+		\begin{exampleblock}{素数の例}
+			\begin{itemize}
+				\item $2$ は素数．
+				\item $3$ も素数．
+			\end{itemize}
+		\end{exampleblock}
+		\begin{alertblock}{素数ではない数}
+			\begin{itemize}
+				\item $4$ は素数ではない．
+				\item $57$ は素数ではない．
+			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+	\section{Processingクイックツアー}
+	\subsection{情報科学応用の資料に出てきたやつ}
+	\begin{frame}{C言語との相違点}
+		\begin{itemize}
+			\item 変数の使用前に変数の型を宣言
+			\begin{itemize}
+				\item forループの中でのみ利用する変数をforループの初期化部分で宣言可能
+				(C++/Java)に由来
+				\begin{itemize}
+					\item 変数を宣言したforループ内だけで通用，ループの外側からの参照不可能
+				\end{itemize}
+				\item プログラム途中での変数宣言が可能
+			\end{itemize}
+			\item 実数を表す標準的な型がProcessingではfloat（Cではdouble）
+		\end{itemize}
+	\end{frame}
+\end{document}

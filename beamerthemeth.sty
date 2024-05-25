@@ -1,0 +1,103 @@
+\mode<presentation>
+
+\defbeamertemplate*{title page}{th}
+{
+	\centering
+	\vfill
+	\begin{beamercolorbox}[sep=4pt,center,rounded=true]{title}
+		\usebeamerfont{title}\inserttitle\par
+		\ifx\insertsubtitle\@empty
+		\else
+			\vskip0.25em
+			\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle
+		\fi
+	\end{beamercolorbox}
+	\vskip2em
+	\begin{beamercolorbox}[sep=4pt,center]{author}
+		\usebeamerfont{author}\insertauthor
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[sep=4pt,center]{institute}
+		\usebeamerfont{institute}\insertinstitute
+	\end{beamercolorbox}
+	\vskip0.75em
+	\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+	\vskip0.75em
+	\begin{beamercolorbox}[sep=4pt,center]{date}
+		\usebeamerfont{date}\insertdate
+	\end{beamercolorbox}
+	\vskip1em
+	\vfill
+}
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[ball]
+
+\defbeamertemplate*{headline}{th}{
+	\hbox{%
+		\usebeamerfont{section in head/foot}%
+		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.65ex,dp=1.5ex,right]{section in head/foot}
+			\usebeamerfont{headline}\usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.65ex,dp=1.5ex,left]{subsection in head/foot}
+			\usebeamerfont{headline}\usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
+		\end{beamercolorbox}
+	}
+}
+\defbeamertemplate*{frametitle}{th}
+{
+	\vskip6pt
+	\hskip-5pt
+	\insertframetitle\par
+	\vskip-18pt
+	\hspace*{313pt}
+	\insertlogo
+}
+\defbeamertemplate*{sidebar right}{th}{}
+\defbeamertemplate*{footline}{th}{
+	\hfill
+	\texttt{
+		\footnotesize
+		\usebeamertemplate{page number in head/foot}
+	}
+	\hskip3pt
+	\hbox{}
+	\vskip2pt
+}
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamersize{text margin left=20px,text margin right=20px}
+
+\definecolor{kutgreen}{RGB}{89,150,35}
+\definecolor{lightkutgreen}{RGB}{230,239,222}
+\definecolor{alert}{RGB}{196,0,0}
+\definecolor{lightalert}{RGB}{246,217,217}
+\definecolor{kutblue}{RGB}{0,59,148}
+\definecolor{lightkutblue}{RGB}{217,226,239}
+\definecolor{lightgray}{RGB}{204,204,204}
+
+\setbeamercolor{titlelike}{fg=white,bg=kutgreen}
+\setbeamercolor{section in head/foot}{fg=kutblue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=kutgreen}
+\setbeamercolor{frametitle}{fg=kutgreen,bg=white}
+\setbeamercolor{block body}{fg=black,bg=lightkutgreen}
+\setbeamercolor{block body alerted}{fg=black,bg=lightalert}
+\setbeamercolor{block body example}{fg=black,bg=lightkutblue}
+\setbeamercolor{block title}{fg=white,bg=kutgreen}
+\setbeamercolor{block title alerted}{fg=white,bg=alert}
+\setbeamercolor{block title example}{fg=white,bg=kutblue}
+\setbeamercolor{alerted text}{fg=alert}
+\setbeamercolor{example text}{fg=kutblue}
+\setbeamercolor{section number projected}{fg=black,bg=lightgray}
+\setbeamercolor{subsection number projected}{bg=lightgray}
+
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{block title}{size={}}
+\setbeamerfont{section number projected}{size=\scriptsize}
+
+\usefonttheme{professionalfonts}
+
+\mode<all>
